@@ -36,6 +36,9 @@ This template project will contain a simple interactive web dashboard with Strea
 
 ![About](assets/screenshot2.png)
 
+- **Git Commit Examples:**
+
+![About](assets/screenshot5.png)
 
 ### Installation of libraries
 
