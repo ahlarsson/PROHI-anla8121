@@ -19,7 +19,6 @@ This template project will contain a simple interactive web dashboard with Strea
 
 ## System description
 
-
  This repository contains a two-page Streamlit web dashboard developed as part of the PROHI course. The app demonstrates an organized dashboard layout with input widgets, synthetic data, and charts, as well as an About page summarizing the course project.
 
 
@@ -29,12 +28,11 @@ This template project will contain a simple interactive web dashboard with Strea
   - A chart showing a Happiness Score 
   - A data table with synthetic data, displaying Flavours statistic. 
   
-
 ![Dashboard](assets/screenshot4.png)
 
 - **About page:**  
   - Displays my name  
-  - Contains a 100–150 word Markdown summary describing the DSHI project
+  - Contains a 100–150 word Markdown summary describing the DSHI project.
 
 ![About](assets/screenshot2.png)
 
