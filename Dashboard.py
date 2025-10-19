@@ -1,9 +1,11 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 
 st.set_page_config(
     page_title="PROHI Dashboard",
     page_icon="👋",
+    layout="wide", 
 )
 
 # Sidebar configuration
@@ -47,18 +49,6 @@ enhance the problem domain related to the selected dataset.
 
 ### UNCOMMENT THE CODE BELOW TO SEE EXAMPLE OF INPUT WIDGETS
 
-# # DATAFRAME MANAGEMENT
-import numpy as np
-
-dataframe = np.random.randn(10, 20)
-st.dataframe(dataframe)
-
-# # Add a slider to the sidebar:
-add_slider = st.slider(
-      'Select a range of values',
-     0.0, 100.0, (25.0, 75.0)
- )
-
 st.header("Interactive Controls")
 
 col1, col2, col3 = st.columns(3)
@@ -86,3 +76,43 @@ st.dataframe(df.head(20))
 st.subheader("Line Chart")
 st.line_chart(df.set_index("x"))
 
+st.subheader("Fun mode")
+
+c1, c2, c3 = st.columns(3)
+with c1:
+    user_name = st.text_input("Your name", placeholder="Type your name")
+with c2:
+    flavor = st.selectbox("Favorite flavor", ["Vanilla", "Chocolate", "Strawberry", "Mint", "Cookie Dough"])
+with c3:
+    scoops = st.slider("Scoops", min_value=1, max_value=5, value=2)
+
+r1, r2 = st.columns(2)
+with r1:
+    sprinkles = st.checkbox("Add sprinkles")
+with r2:
+    toppings = st.multiselect("Toppings", ["Caramel", "Chocolate chips", "Nuts", "Marshmallows"], default=["Caramel"])
+
+st.write(f"Hello {user_name or 'friend'}")
+st.write(f"You chose {scoops} scoop(s) of {flavor} with{' no' if not sprinkles and len(toppings)==0 else ''} extras.")
+
+# Tiny synthetic data tied to the choices
+np.random.seed(7)
+base = {
+    "Vanilla": 30, "Chocolate": 35, "Strawberry": 22, "Mint": 18, "Cookie Dough": 28
+}
+# Boost the selected flavor a little
+boosted = {k: v + (8 if k == flavor else 0) for k, v in base.items()}
+
+df_sales = pd.DataFrame({"Flavor": list(boosted.keys()), "Sales": list(boosted.values())}).set_index("Flavor")
+
+# A playful “happiness score” from choices
+topping_factor = 0.15 * len(toppings)
+sprinkle_factor = 0.25 if sprinkles else 0.0
+happiness = 5 + scoops * (1.0 + topping_factor + sprinkle_factor) + np.random.normal(0, 0.4)
+
+st.metric("Happiness score", f"{happiness:.1f}")
+st.caption("All data is synthetic and just for fun.")
+
+st.bar_chart(df_sales)
+st.subheader("Data")
+st.dataframe(df_sales, use_container_width=True)

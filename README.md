@@ -4,6 +4,7 @@
 <!-- As main author, do not write anything in the line below.
 The collaborator will edit the line below in GitHub -->
 **Contributor:** Pratibha Rustogi 
+
 _Note that this file is written in **MarkDown** language. A reference is available here: <https://www.markdownguide.org/basic-syntax/>_
 
 
@@ -16,10 +17,25 @@ _Note that this file is written in **MarkDown** language. A reference is availab
 
 This template project will contain a simple interactive web dashboard with Streamlit.
 
+## System description
+
+
+ This repository contains a two-page Streamlit web dashboard developed as part of the PROHI course. The app demonstrates an organized dashboard layout with input widgets, synthetic data, and charts, as well as an About page summarizing the course project.
+
+
+- **Dashboard page:**  
+  - Three interactive input widgets (selectbox, slider, text input, etc.)  
+  - A data table with synthetic data generated using NumPy  
+  - A line chart showing trends over time  
+
 ![Dashboard](assets/screenshot1.png)
+
+- **About page:**  
+  - Displays my name  
+  - Contains a 100–150 word Markdown summary describing the DSHI project
+
 ![About](assets/screenshot2.png)
 
-## System description
 
 ### Installation of libraries
 
