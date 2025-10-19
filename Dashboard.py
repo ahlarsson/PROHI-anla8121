@@ -48,7 +48,7 @@ enhance the problem domain related to the selected dataset.
 """
 
 
-st.image("assets/screenshot3.png", use_column_width=True)
+st.image("assets/screenshot3.png", use_container_width=True)
 
 st.subheader("Ice cream Chart")
 
@@ -85,7 +85,6 @@ sprinkle_factor = 0.25 if sprinkles else 0.0
 happiness = 5 + scoops * (1.0 + topping_factor + sprinkle_factor) + np.random.normal(0, 0.4)
 
 st.metric("Happiness score", f"{happiness:.1f}")
-st.caption("All data is synthetic and just for fun.")
 
 st.bar_chart(df_sales)
 st.subheader("Data")
