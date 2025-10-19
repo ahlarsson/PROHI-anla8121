@@ -76,6 +76,8 @@ st.dataframe(df.head(20))
 st.subheader("Line Chart")
 st.line_chart(df.set_index("x"))
 
+st.image("assets/screenshot3.png", use_column_width=True)
+
 st.subheader("Fun mode")
 
 c1, c2, c3 = st.columns(3)
