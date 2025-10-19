@@ -19,7 +19,7 @@ This template project will contain a simple interactive web dashboard with Strea
 
 ## System description
 
- This repository contains a two-page Streamlit web dashboard developed as part of the PROHI course. The app demonstrates an organized dashboard layout with input widgets, synthetic data, and charts, as well as an About page summarizing the course project.
+ This repository contains a two-page Streamlit web dashboard developed as part of the PROHI course. The app demonstrates an organized dashboard layout with input widgets, synthetic data, and charts, as well as an About page summarizing the DSHI course project.
 
 
 - **Dashboard page:**  
