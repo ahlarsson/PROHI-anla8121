@@ -24,11 +24,13 @@ This template project will contain a simple interactive web dashboard with Strea
 
 
 - **Dashboard page:**  
-  - Three interactive input widgets (selectbox, slider, text input, etc.)  
-  - A data table with synthetic data generated using NumPy  
-  - A line chart showing trends over time  
+  - "Ice Cream Chart"
+  - Three interactive input widgets (selectbox, slider, multiple choice)  
+  - A chart showing a Happiness Score 
+  - A data table with synthetic data, displaying Flavours statistic. 
+  
 
-![Dashboard](assets/screenshot1.png)
+![Dashboard](assets/screenshot4.png)
 
 - **About page:**  
   - Displays my name  
