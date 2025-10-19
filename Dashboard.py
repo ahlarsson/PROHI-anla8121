@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 st.set_page_config(
     page_title="PROHI Dashboard",
@@ -47,13 +48,41 @@ enhance the problem domain related to the selected dataset.
 ### UNCOMMENT THE CODE BELOW TO SEE EXAMPLE OF INPUT WIDGETS
 
 # # DATAFRAME MANAGEMENT
-# import numpy as np
+import numpy as np
 
-# dataframe = np.random.randn(10, 20)
-# st.dataframe(dataframe)
+dataframe = np.random.randn(10, 20)
+st.dataframe(dataframe)
 
 # # Add a slider to the sidebar:
-# add_slider = st.slider(
-#     'Select a range of values',
-#     0.0, 100.0, (25.0, 75.0)
-# )
+add_slider = st.slider(
+      'Select a range of values',
+     0.0, 100.0, (25.0, 75.0)
+ )
+
+st.header("Interactive Controls")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    user_name = st.text_input("Enter your name")
+with col2:
+    category = st.selectbox("Choose a category", ["A", "B", "C"])
+with col3:
+    n_points = st.slider("Number of data points", min_value=10, max_value=200, value=50)
+
+st.write(f"Hello {user_name if user_name else 'user'}, you selected category **{category}** and {n_points} data points.")
+
+st.header("Synthetic Data Example")
+
+np.random.seed(42)
+x = np.arange(n_points)
+y1 = np.cumsum(np.random.randn(n_points))
+y2 = np.cumsum(np.random.randn(n_points) * 0.5)
+
+df = pd.DataFrame({"x": x, "Series 1": y1, "Series 2": y2})
+st.subheader("Data Table (first 20 rows)")
+st.dataframe(df.head(20))
+
+st.subheader("Line Chart")
+st.line_chart(df.set_index("x"))
+
