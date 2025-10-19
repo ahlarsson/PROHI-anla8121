@@ -1,18 +1,23 @@
 # PROHI Dashboard Example
 
-**Author**: [Anna Larsson]
+**Author**: Anna Larsson
 <!-- As main author, do not write anything in the line below.
 The collaborator will edit the line below in GitHub -->
-Pratibha Rustogi edited
+**Contributor:** Pratibha Rustogi 
 _Note that this file is written in **MarkDown** language. A reference is available here: <https://www.markdownguide.org/basic-syntax/>_
 
-_Here you can include images, like the logo from SU_
+
 
 ![Your dashboard](./assets/project-logo.jpg)
 
+
+
 ## Introduction
 
-_This template project will contain a simple interactive web dashboard with Streamlit. Feel free to edit this document as desired_
+This template project will contain a simple interactive web dashboard with Streamlit.
+
+![Dashboard](assets/screenshot1.png)
+![About](assets/screenshot2.png)
 
 ## System description
 
@@ -54,4 +59,5 @@ Tested on Python 3.12.7 with the following packages:
 
 ## Contributors
 
-_Add the project's authors, contact information, and links to websites or portfolios._
+
+Anna Larsson, anla8121@student.su.se.
