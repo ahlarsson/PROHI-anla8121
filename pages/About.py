@@ -16,11 +16,5 @@ The domain area of the dataset was influences of Healthcare insurance expenses. 
 relationship between different personal characteristics such as age, gender, BMI, smoking and geographic factors, 
 and how they may affect medical insurance charges.
 
-Ice Cream Chart
-For this Dashboard project I wanted to simulates ice cream sales data. 
-The users can personalize the dashboard through several input widgets. 
-By selecting their favorite flavor, number of scoops, and toppings, users 
-generate synthetic “sales” data that updates the chart and metrics in 
-real time.
 """
 )
